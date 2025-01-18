@@ -43,6 +43,19 @@ const SignIn: React.FC = () => {
     colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
   };
 
+  const [brideName, setBrideName] = useState("");
+  const [groomName, setGroomName] = useState("");
+  const [marriageDate, setMarriageDate] = useState("");
+  const [photo, setPhoto] = useState<File | null>(null);
+
+  React.useEffect(() => {
+    const brideName = sessionStorage.getItem("brideName") || "";
+    const groomName = sessionStorage.getItem("groomName") || "";
+    const marriageDate = sessionStorage.getItem("marriageDate") || "";
+    setBrideName(brideName);
+    setGroomName(groomName);
+    setMarriageDate(marriageDate);
+  }, []);
 
   useEffect(() => {
     if (sigCanvas.current) {
@@ -195,14 +208,24 @@ const SignIn: React.FC = () => {
     <div className="rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
       <div className="flex justify-center items-center align-middle">
         <div className="w-full  p-5 sm:w-1/2 xl:w-1/2">
-          <div className=" bg-bandgBg bg-cover bg-center bg-no-repeat overflow-hidden rounded-2xl h-[652px] flex justify-center items-center text-center  align-middle ">
-            <Image
+        <div className=" flex h-[652px] flex-col items-center justify-center overflow-hidden rounded-2xl bg-bandgBg bg-cover bg-center bg-no-repeat text-center  align-middle ">
+        <Image
                 src={brideAndGoomImage ? brideAndGoomImage : bandgPhoto}
                 alt="Logo"
                 width={300} 
                 height={400}
                 className=" w-[300px] h-[400px]"
               />
+               <div className="-mt-5 flex w-full items-center justify-center">
+              <button className="text-md h-[180px] w-3/4  rounded-2xl bg-myButton bg-cover bg-center bg-no-repeat p-5 font-bold text-white">
+                <span className="text-4xl font-bold">
+                  {brideName} {brideName ? "&" : ""} {groomName}
+                </span>
+                <br />
+
+                <span className=""> {marriageDate} </span>
+              </button>
+            </div>
           </div>
         </div>
 
