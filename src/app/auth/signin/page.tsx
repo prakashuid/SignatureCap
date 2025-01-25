@@ -2,11 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
-import ButtonDefault from "@/components/Buttons/ButtonDefault";
-import Buttons from "@/app/ui-elements/buttons/page";
+
 import SignatureCanvas from "react-signature-canvas";
 import confetti from "canvas-confetti";
 import { Camera } from "react-camera-pro";

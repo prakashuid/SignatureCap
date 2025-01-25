@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import SignIn from "../auth/signin/page";
+import Profile from "../profile/page";
 
 const HomePage: React.FC = () => {
   const [brideName, setBrideName] = useState("");
@@ -19,8 +20,10 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="h-screen">
+      <Profile />
+      {/*       
       <header className="bg-headerBdr sticky top-0 z-999 flex h-15 w-full border-stroke bg-white bg-cover bg-center bg-no-repeat dark:border-stroke-dark dark:bg-gray-dark"></header>
-      {/* <div className="flex flex-wrap items-center h-screen"></div> */}
+     
       <div className="flex items-center justify-center bg-white pt-5">
         <h2 className="text-heading-3 font-medium text-dark dark:text-white">
           {brideName}{" "}
@@ -39,9 +42,9 @@ const HomePage: React.FC = () => {
         </h2>
       </div>
       <SignIn />
-      {/* <div className="flex flex-wrap items-center h-screen"></div> */}
+     
 
-      <footer className="bg-footerBdr sticky top-0 z-999 flex h-15 w-full border-stroke bg-white bg-cover bg-center bg-no-repeat dark:border-stroke-dark dark:bg-gray-dark"></footer>
+      <footer className="bg-footerBdr sticky top-0 z-999 flex h-15 w-full border-stroke bg-white bg-cover bg-center bg-no-repeat dark:border-stroke-dark dark:bg-gray-dark"></footer> */}
     </div>
   );
 };

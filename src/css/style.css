@@ -4,6 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.txYHk{
+    width: 92% !important;
+    height: 92% !important;
+    object-fit: cover;
+    z-index: 0;
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
 @layer base {
     body {
         @apply relative z-1 bg-gray-2 font-satoshi text-base font-normal text-dark-5 dark:bg-[#020D1A] dark:text-dark-6;
