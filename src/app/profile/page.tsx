@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import topLeft from "../../../public/images/CustImages/Topleft.png";
-import bottomLeft from "../../../public/images/CustImages/Bottomleft.png";
+import BottomLeft from "../../../public/images/CustImages/Bottomleft.png";
 import bottomRight from "../../../public/images/CustImages/BottomRight.png";
 import SignatureCanvas from "react-signature-canvas";
 import confetti from "canvas-confetti";
@@ -259,7 +259,7 @@ const Profile = () => {
           <div className="absolute -bottom-5 -left-40">
 
             <Image
-              src={bottomLeft}
+              src={BottomLeft}
               alt="Logo"
               width={550}
               height={600}
