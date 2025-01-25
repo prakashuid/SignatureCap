@@ -3,13 +3,19 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import topLeft from "../../../public/images/CustImages/Topleft.png";
-import BottomLeft from "../../../public/images/CustImages/Bottomleft.png";
+import BottomLeft from "../../../public/images/CustImages/BottomLeft.png";
 import bottomRight from "../../../public/images/CustImages/BottomRight.png";
 import SignatureCanvas from "react-signature-canvas";
 import confetti from "canvas-confetti";
 import { Camera } from "react-camera-pro";
 import bandgPhoto from "../../../public/images/CustImages/BandG.png";
 import { useRouter } from "next/navigation";
+
+
+interface CameraRef {
+  takePhoto: () => string;
+  // Add any other necessary methods or properties
+}
 
 
 const Profile = () => {
@@ -219,8 +225,6 @@ const Profile = () => {
                 facingMode="user"
                 aspectRatio={ratio}
                 errorMessages={errorMessages}  
-                className="rounded-full"
-                
               />
             </div>
 

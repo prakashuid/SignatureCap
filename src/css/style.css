@@ -6,16 +6,26 @@
 
 
 .txYHk{
-    width: 92% !important;
-    height: 92% !important;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
     z-index: 0;
     -webkit-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
     border-radius: 50%;
-    margin-left: 8px;
-    margin-top: 7px;
+    border-radius: 50%;
+    border: 3px solid #FFF8FC;
+  
+}
+
+.gKQYjk {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transform: rotateY(180deg);
+  
 }
 
 @layer base {
